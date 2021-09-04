@@ -19,6 +19,7 @@ public class Main extends Application{
 		Parent root = fxmlLoader.load();
 		Scene scene = new Scene(root);
 		
+		controller.setMainStage(primaryStage);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Classroom");
 		primaryStage.show();
