@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Classroom {
 	UserAccount userAccount;
 	private List<UserAccount> userAccounts;
@@ -50,10 +51,40 @@ public class Classroom {
 			if(
 					(user.equals(userAccounts.get(i).getUserName()))&&
 					(password.equals(userAccounts.get(i).getPassword()))) {
+				
 				check = true;
 			}
 		}
 		return check;
+	}
+	
+	
+	public boolean putPicture(String user, String password, String absolutePath) {
+		boolean check = false;
+		for(int i=0; (i<getUserAccounts().size())&&(check==false);i++) {
+			if(
+					(user.equals(userAccounts.get(i).getUserName()))&&
+					(password.equals(userAccounts.get(i).getPassword()))&&
+					(absolutePath.equals(userAccounts.get(i).getProfilePhoto()))
+					) {
+				check = true;
+			}
+		}
+		return check;
+	}
+	
+	
+	public String putInfo(String user, String password) {
+		boolean check = false;
+		for(int i=0; (i<getUserAccounts().size())&&(check==false);i++) {
+			if(
+					(user.equals(userAccounts.get(i).getUserName()))&&
+					(password.equals(userAccounts.get(i).getPassword()))
+					) {
+				check = true;
+			}
+		}
+		return user;
 	}
 
 }

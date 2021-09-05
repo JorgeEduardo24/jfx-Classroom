@@ -1,9 +1,5 @@
 package model;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -97,17 +93,6 @@ public class UserAccount implements Serializable {
 		return id;
 	}
 	
-	/*
-	public boolean checkUser(String userName, String password) {
-		boolean check = false;
-		if(
-				(getUserName().equals(userName)) &&
-				(getPassword().equals(password))){
-					check = true;
-				}
-		return check;
-	}
-	*/
 
 	
 }
