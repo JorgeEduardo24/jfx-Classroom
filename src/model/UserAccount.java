@@ -1,12 +1,9 @@
 package model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class UserAccount implements Serializable {
+public class UserAccount {
 	
-	
-	private static final long serialVersionUID = 1L;
 	private String userName;
 	private String password;
 	private String profilePhoto;

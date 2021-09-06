@@ -34,8 +34,8 @@ import model.Classroom;
 import model.UserAccount;
 
 public class ClassroomGUI {
-	Classroom classroom;
-	ObservableList<UserAccount> observableList;
+	public Classroom classroom;
+	public ObservableList<UserAccount> observableList;
 
 	private Stage mainStage;
 
@@ -242,8 +242,11 @@ public class ClassroomGUI {
 			}
 
 			classroom.addUserAccount(userName, password, profilePhoto, gender, careers, birthday, browser);
-			classroom.saveUserAccount();
-			classroom.loadUserAccount();
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Classroom");
+			alert.setHeaderText("Successful action");
+			alert.setContentText("User added to CLASSROOM !");
+			alert.show();
 
 		} else {
 			Alert alert = new Alert(AlertType.ERROR);
@@ -253,11 +256,7 @@ public class ClassroomGUI {
 			alert.show();
 		}
 		
-		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Classroom");
-		alert.setHeaderText("Successful action");
-		alert.setContentText("User added to CLASSROOM !");
-		alert.show();
+
 	}
 
 	@FXML
@@ -275,7 +274,7 @@ public class ClassroomGUI {
 	// Window 3 "account-list": Methods
 
 	@FXML
-	void logOut(ActionEvent event) throws IOException {
+	public void logOut(ActionEvent event) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-pane.fxml"));
 		fxmlLoader.setController(this);
 		Parent root = fxmlLoader.load();

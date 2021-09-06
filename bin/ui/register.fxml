@@ -10,6 +10,8 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -18,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="579.0" style="-fx-background-color: #175B00;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="43.0" layoutY="90.0" prefHeight="397.0" prefWidth="481.0">
          <columnConstraints>
@@ -35,9 +37,9 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="Username:">
+            <Label text="Username:" textFill="WHITE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -46,9 +48,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Password:" GridPane.rowIndex="1">
+            <Label text="Password:" textFill="WHITE" GridPane.rowIndex="1">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -57,9 +59,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Profile photo:" GridPane.rowIndex="2">
+            <Label text="Profile photo:" textFill="WHITE" GridPane.rowIndex="2">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -68,9 +70,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Gender:" GridPane.rowIndex="3">
+            <Label text="Gender:" textFill="WHITE" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -79,9 +81,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Career:" GridPane.rowIndex="4">
+            <Label text="Career:" textFill="WHITE" GridPane.rowIndex="4">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -90,9 +92,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Birthday:" GridPane.rowIndex="5">
+            <Label text="Birthday:" textFill="WHITE" GridPane.rowIndex="5">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -101,9 +103,9 @@
                   <Insets right="5.0" />
                </padding>
             </Label>
-            <Label text="Favourite browser:" GridPane.rowIndex="6">
+            <Label text="Favourite browser:" textFill="WHITE" GridPane.rowIndex="6">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets right="10.0" />
@@ -133,9 +135,9 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="353.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <RadioButton mnemonicParsing="false" text="Male">
+                  <RadioButton mnemonicParsing="false" text="Male" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <HBox.margin>
                         <Insets right="38.0" top="16.0" />
@@ -144,17 +146,17 @@
                         <ToggleGroup fx:id="tgglGender" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$tgglGender">
+                  <RadioButton mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$tgglGender">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <HBox.margin>
                         <Insets right="38.0" top="16.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Other" toggleGroup="$tgglGender">
+                  <RadioButton mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$tgglGender">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <HBox.margin>
                         <Insets right="38.0" top="16.0" />
@@ -164,25 +166,25 @@
             </HBox>
             <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <CheckBox fx:id="chbxSoftwareE" mnemonicParsing="false" text="Software Engineering">
+                  <CheckBox fx:id="chbxSoftwareE" mnemonicParsing="false" text="Software Engineering" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets top="7.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="chbxTelematicE" mnemonicParsing="false" text="Telematic Engineering">
+                  <CheckBox fx:id="chbxTelematicE" mnemonicParsing="false" text="Telematic Engineering" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets top="7.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="chbxIndustrialE" mnemonicParsing="false" text="Industrial Engineering">
+                  <CheckBox fx:id="chbxIndustrialE" mnemonicParsing="false" text="Industrial Engineering" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                      <padding>
                         <Insets top="7.0" />
@@ -190,7 +192,7 @@
                   </CheckBox>
                </children>
             </VBox>
-            <DatePicker fx:id="dpBirthday" promptText="Elija una fecha" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dpBirthday" promptText="Choose a date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <ComboBox fx:id="cmbxChooseBrowser" prefWidth="150.0" promptText="Choose an option" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
@@ -203,12 +205,12 @@
             </HBox>
          </children>
       </GridPane>
-      <Label alignment="CENTER" layoutX="221.0" layoutY="14.0" prefHeight="27.0" prefWidth="149.0" text="Join to Classroom">
+      <Label alignment="CENTER" layoutX="209.0" layoutY="14.0" prefHeight="27.0" prefWidth="174.0" text="Join to Classroom" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="182.0" layoutY="41.0" text="Create your account">
+      <Label layoutX="182.0" layoutY="41.0" text="Create your account" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -223,5 +225,10 @@
             <Font size="13.0" />
          </font>
       </Button>
+      <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="43.0" layoutY="9.0">
+         <image>
+            <Image url="@../../../../Pictures/AppsPictures/Azul%20Moderno%20Íconos%20Doctor%20Familiar%20Logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
